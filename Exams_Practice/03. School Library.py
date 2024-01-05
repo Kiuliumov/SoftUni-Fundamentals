@@ -26,4 +26,3 @@ while user_input != 'Done':
             print(books_on_the_shelf[index])
     user_input = input()
 print(', '.join(books_on_the_shelf))
-input('Press any key to continue...\n')
