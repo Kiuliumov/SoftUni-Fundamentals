@@ -1,0 +1,11 @@
+def get_min(array): return min(array)
+def get_max(array): return max(array)
+def get_sum(array): return sum(array)
+
+list_of_nums = input().split(' ')
+min_num = get_min(list_of_nums)
+max_num = get_max(list_of_nums)
+sum_of_nums = get_sum(list_of_nums)
+print(f'The minimum number is {min_num}')
+print(f'The maximum number is {max_num}')
+print(f'The sum numbers is: {sum_of_nums}')
