@@ -35,6 +35,9 @@ while command != 'End':
         else:
             print('Gold added cannot be a negative number!')
     command = input()
-print(f'Ahoy, Captain! There are {len(cities)} wealthy settlements to go to:')
-for city,data in cities.items():
-    print(f'{city} -> Population: {data["population"]} citizens, Gold: {data["gold"]} kg')
+if cities:
+    print(f'Ahoy, Captain! There are {len(cities)} wealthy settlements to go to:')
+    for city,data in cities.items():
+        print(f'{city} -> Population: {data["population"]} citizens, Gold: {data["gold"]} kg')
+else:
+    print('Ahoy, Captain! All targets have been plundered and destroyed!')
