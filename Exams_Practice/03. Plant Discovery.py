@@ -1,32 +1,40 @@
 n = int(input())
-plants = {}
+plant_data = {}
 for _ in range(n):
-    plants_given = input().split('<->')
-    plant_name = plants_given[0]
-    plant_values = list(map(float, plants_given[1].split()))
-    plants[plant_name] = plant_values
+    data = input().split('<->')
+    plant_name, plant_rarity = data[0], int(data[1])
+    plant_data[plant_name] = [plant_rarity, []]
 command = input()
 while command != 'Exhibition':
-    if command.startswith('Rate'):
-        command_part, rest = command.split(' ', 1)
-        name, value = rest.split(' - ')
-        plants[name].append(float(value))
-    elif command.startswith('Update'):
-        command_part, rest = command.split(' ', 1)
-        name, new_value = rest.split(' - ')
-        plants[name][0] = float(new_value)
-    elif command.startswith('Reset'):
-        name = command.split(' ')[1]
-        plants[name] = []
+    command, rest = command.split(': ')
+    if command == 'Rate':
+        plant, rating = rest.split(' - ')
+        if plant not in plant_data:
+            print('error')
+        else:
+            plant_data[plant][1].append(int(rating))
+    elif command == 'Update':
+        plant, new_rarity = rest.split(' - ')
+        if plant not in plant_data:
+            print('error')
+        else:
+            plant_data[plant][0] = int(new_rarity)
+    elif command == 'Reset':
+        plant = rest
+        if plant not in plant_data:
+            print('error')
+        else:
+            if plant not in plant_data:
+                print('error')
+            else:
+                plant_data[plant][1] = []
     command = input()
-for plant_name, plant_values in plants.items():
-    rarity = int(plant_values[0]) if plant_values else 0
-    if len(plant_values) > 1:
-        average_rating = sum(plant_values[1:]) / (len(plant_values) - 1)
-        plants[plant_name].append(average_rating)
+print('Plants for the exhibition:')
+for plant_name, data_list in plant_data.items():
+    rarity = data_list[0]
+    ratings = data_list[1]
+    if ratings:
+        average_rating = sum(ratings) / len(ratings)
     else:
-        plants[plant_name].append(0.00)
-print("Plants for the exhibition:")
-for plant_name, plant_values in plants.items():
-    rarity = int(plant_values[0]) if plant_values else 0
-    print(f'- {plant_name}; Rarity: {rarity}; Rating: {plant_values[2]:.2f}')
+        average_rating = 0
+    print(f'- {plant_name}; Rarity: {rarity}; Rating: {average_rating:.2f}')
