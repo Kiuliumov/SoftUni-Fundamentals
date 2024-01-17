@@ -16,7 +16,7 @@ while command != 'End':
     command = command.split('=>')
     if command[0] == 'Plunder':
         command.pop(0)
-        city,people,gold = command
+        city, people, gold = command
         people = int(people)
         gold = int(gold)
         cities[city]['population'] -= people
