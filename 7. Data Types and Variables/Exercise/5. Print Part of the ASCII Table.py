@@ -1,4 +1,4 @@
-first_boundery = int(input())
-last_boundery = int(input())
-for i in range(first_boundery,last_boundery + 1):
+first_boundary = int(input())
+last_boundary = int(input())
+for i in range(first_boundary, last_boundary + 1):
     print(chr(i),end=' ')

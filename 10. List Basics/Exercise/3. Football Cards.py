@@ -8,9 +8,9 @@ for i in given_first_array:
         tokens = i.split('-')
         if tokens[0] == 'A':
             team_a -= 1
-            seen.append(i)
         elif tokens[0] == 'B':
             team_b -= 1
+        seen.append(i)
         if team_a < 7 or team_b < 7:
             is_abandoned = True
             break

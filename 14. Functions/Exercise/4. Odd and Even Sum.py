@@ -8,7 +8,7 @@ def get_odd_and_even_sum(number):
         else:
             odd_sum += i
     return [even_sum,odd_sum]
-given_number = int(input())
+given_number = input()
 num = get_odd_and_even_sum(given_number)
 even_sum_of_numbers = num[0]
 odd_sum_of_numbers = num[1]

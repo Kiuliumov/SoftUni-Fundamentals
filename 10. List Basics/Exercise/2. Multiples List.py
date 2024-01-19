@@ -1,6 +1,13 @@
-length = int(input())
 factor = int(input())
-l1 = [range(1,length+1)]
-for i in range(len(l1)):
-    l1[i] *= factor
+length = int(input())
+l1 = []
+breaker = False
+while not breaker:
+    for i in range(99999):
+        if len(l1) == length:
+            breaker = True
+        if breaker:
+            break
+        if i % factor == 0 and i != 0:
+            l1.append(i)
 print(l1)

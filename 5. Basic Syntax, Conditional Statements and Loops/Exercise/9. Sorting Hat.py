@@ -2,6 +2,7 @@ name = input()
 while name != 'Welcome!':
     if name == 'Voldemort':
         print('You must not speak of that name!')
+        break
     if len(name) < 5:
         print(f'{name} goes to Gryffindor.')
     elif len(name) == 5:
@@ -11,4 +12,5 @@ while name != 'Welcome!':
     else:
         print(f'{name} goes to Hufflepuff.')
     name = input()
-print('Welcome to Hogwarts.')
+else:
+    print('Welcome to Hogwarts.')

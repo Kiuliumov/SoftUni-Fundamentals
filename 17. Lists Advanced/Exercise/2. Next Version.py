@@ -1,0 +1,5 @@
+version = input().split('.')
+version = ''.join(version)
+version = int(version)
+version = str(version + 1)
+print('.'.join(list(version)))
