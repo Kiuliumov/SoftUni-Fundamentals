@@ -20,4 +20,3 @@ if inventory.get('motes', 0) >= 250:
 
 for item, quantity in inventory.items():
     print(f'{item}: {quantity}')
-input('Enter any key to continue...')
