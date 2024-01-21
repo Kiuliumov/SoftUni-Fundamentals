@@ -32,4 +32,4 @@ for event in events:
             print(f'Closed! Cannot afford {ingredient}.')
             break
 else:
-    print(f'Day complete\nCoins: {coins}\nEnergy: {energy}')
+    print(f'Day completed!\nCoins: {coins}\nEnergy: {energy}')
