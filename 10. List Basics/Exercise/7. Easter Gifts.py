@@ -12,4 +12,5 @@ while command != 'No Money':
     elif command_parts[0] == 'JustInCase':
         gifts[-1] = command_parts[1]
     command = input()
-print(' '.join([x for x in gifts if x is not None]))
+arr = [x for x in gifts if x is not None]
+print(' '.join(arr))
