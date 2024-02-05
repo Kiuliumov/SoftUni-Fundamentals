@@ -1,3 +1,4 @@
+#basic list
 coins = 100
 energy = 100
 events = input().split('|')
