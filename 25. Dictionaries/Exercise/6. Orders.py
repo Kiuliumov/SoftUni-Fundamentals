@@ -1,3 +1,4 @@
+#dict
 command = input()
 dictionary = {}
 while command != 'buy':
