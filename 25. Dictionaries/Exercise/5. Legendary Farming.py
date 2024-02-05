@@ -1,3 +1,4 @@
+#basic hashmap
 inventory = {}
 materials = input().split(' ')
 for i in range(0, len(materials) - 1, 2):
