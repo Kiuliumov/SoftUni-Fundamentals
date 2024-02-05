@@ -1,4 +1,4 @@
-chars = [x for x in input() if x != ' ']
+chars = [x for x in input() if x != ' '] #remove all spaces
 chars_dict = {}
 for char in chars:
     if char not in chars_dict:
